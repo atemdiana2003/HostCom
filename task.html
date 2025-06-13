@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Containing Info</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="form">
+        <h1 class="form-two">Atem Diana</h1>
+
+         <section id="contact">
+            <form class="contact-form">
+              <h2>Contact Me</h2>
+              <input type="text"  name="fullName" placeholder="Full Name" id="FullName" required>
+              <input type="email" name="email" placeholder="Email Address" required>
+              <input type="text" name="password" placeholder="Password" required>
+              <input type="number"placeholder="Phone number" required>
+              <input type="date" placeholder="Date of birth" required>
+              <input type="text" placeholder="place of birth" required>
+              <textarea rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit" onclick="validateForm()">Submit</button>
+            </form>
+          </section>
+          <script>
+            function validateForm(){
+                const username = document.getElementById("FullName").value;
+                const password = document.getElementById("Password").value;
+                if (username.value.length < 4) {
+                    alert("Username must be at least 4 characters long.");
+                    return false;
+                } 
+                if (password.length < 6) {
+                    alert("Password must be at least 6 characters long.");
+                    return false;
+                } 
+                return true; 
+            }
+          </script>
+    </div>
+   <footer>
+            <p>&copy; 2025 Atem Diana. All rights reserved.</p>
+            <p>
+              <a href="https://facebook.com" target="_blank">Facebook: Atem Diana</a> |
+              <a href="https://instagram.com" target="_blank">Instagram: Labelle</a> |
+              <a href="https://tiktok.com" target="_blank">TikTok: Labelle</a> |
+              <a href="https://twitter.com" target="_blank">Twitter: None</a> |
+              <a href="https://linkedin.com" target="_blank">LinkedIn: Atem Diana</a>
+            </p>
+          </footer>
+</body>
+</html>
